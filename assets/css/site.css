@@ -243,3 +243,90 @@ a:hover {
 .notfound p {
   margin: 0 0 0.5rem;
 }
+
+/* Founder page */
+
+.page-header {
+  padding-block: clamp(2rem, 6vh, 3rem) 0;
+  text-align: center;
+}
+
+.page-header .logo {
+  width: 5rem;
+}
+
+.profile {
+  padding-block: clamp(2rem, 6vh, 3rem) clamp(2.5rem, 7vh, 4rem);
+  text-align: center;
+}
+
+.headshot {
+  width: 12rem;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  object-fit: cover;
+}
+
+.profile h1 {
+  margin: 1.5rem 0 0.25rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 2rem + 3vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+.profile .role {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.prose p + p {
+  margin-top: 1rem;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Icons only on narrow screens so all links stay on one row. */
+@media (max-width: 36rem) {
+  .social-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.social a:hover {
+  border-color: var(--accent);
+}
+
+.social svg {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+}
