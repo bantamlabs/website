@@ -186,6 +186,44 @@ a:hover {
   color: var(--muted);
 }
 
+/* Before/after screenshots: card photo → app entry. Stacks with a down arrow on narrow screens. */
+.card-demo {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0 0;
+}
+
+.card-shot {
+  flex: 0 1 13rem;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.card-arrow {
+  flex: none;
+  width: 2.5rem;
+  color: var(--accent);
+}
+
+@media (max-width: 36rem) {
+  .card-demo {
+    flex-direction: column;
+  }
+
+  .card-shot {
+    flex: none;
+    width: min(100%, 14rem);
+  }
+
+  .card-arrow {
+    transform: rotate(90deg);
+  }
+}
+
 .card-placeholder {
   grid-column: 1 / -1;
   align-items: center;
