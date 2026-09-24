@@ -1,6 +1,6 @@
 # bantamlabs.com
 
-Static website for Bantam Labs LLC. Plain HTML and CSS: no framework, no build step, no JavaScript.
+Static website for Bantam Labs LLC. Plain HTML and CSS: no framework and no build step. The only JavaScript is the analytics loader.
 
 ## Layout
 
@@ -8,6 +8,7 @@ Static website for Bantam Labs LLC. Plain HTML and CSS: no framework, no build s
 index.html            Home page
 404.html              Not-found page (GitHub Pages serves it automatically)
 assets/css/site.css   All styles; colors are CSS variables at the top
+assets/js/analytics.js PostHog snippet (production only; same project as ParlayCards.ai)
 assets/fonts/         Bebas Neue (headings only), self-hosted, SIL OFL (see OFL.txt)
 assets/img/           Logo renditions (WebP), favicons, Open Graph image
 brand/                Unmodified masters: logo 4a (944×1312 PNG), founder headshot (800×800 JPEG)
@@ -30,7 +31,7 @@ Light and dark mode follow the OS setting. In Chrome DevTools you can switch the
 ## Adding a product
 
 1. In `index.html`, find the Products section. Replace the `card-placeholder` item with one `<li class="card">` per product. A commented template is in the file.
-2. For a product page, create `products/<slug>/index.html`. Copy the `<head>` from `404.html`, then set its title, description, canonical URL and Open Graph tags.
+2. For a product page, create `products/<slug>/index.html`. Copy the `<head>` from `404.html`, then set its title, description, canonical URL and Open Graph tags. The copied `<head>` already includes the analytics script.
 3. Add the new URL to `sitemap.xml`.
 
 The card grid adapts on its own: one column on phones, and more as the width allows.
