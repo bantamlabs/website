@@ -298,13 +298,34 @@ a:hover {
   text-align: center;
 }
 
+/* Terrace photo behind the headshot; the headshot overlaps its bottom edge. */
+.banner {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
 .headshot {
+  position: relative;
   width: 12rem;
   aspect-ratio: 1;
-  margin-inline: auto;
+  margin: -6rem auto 0;
   border-radius: 50%;
-  border: 1px solid var(--border);
+  border: 0.375rem solid var(--bg);
   object-fit: cover;
+}
+
+@media (max-width: 36rem) {
+  .banner {
+    aspect-ratio: 2 / 1;
+  }
+
+  .headshot {
+    width: 9rem;
+    margin-top: -4.5rem;
+  }
 }
 
 .profile h1 {
