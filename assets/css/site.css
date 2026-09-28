@@ -140,7 +140,7 @@ a:hover {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   margin: 0;
   padding: 0;

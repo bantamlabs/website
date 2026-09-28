@@ -34,7 +34,7 @@ Light and dark mode follow the OS setting. In Chrome DevTools you can switch the
 2. For a product page, create `products/<slug>/index.html`. Copy the `<head>` from `404.html`, then set its title, description, canonical URL and Open Graph tags. The copied `<head>` already includes the analytics script.
 3. Add the new URL to `sitemap.xml`.
 
-The card grid adapts on its own: one column on phones, and more as the width allows.
+Product cards stack in a single column, one full-width card per product.
 
 ## Regenerating images
 
