@@ -13,6 +13,7 @@ assets/fonts/         Bebas Neue (headings only), self-hosted, SIL OFL (see OFL.
 assets/img/           Logo renditions (WebP), favicons, Open Graph image
 brand/                Masters: logo 4a (944×1312 PNG), founder headshot (800×800 JPEG), founder banner (2400×800 JPEG)
 favicon.ico           16/32/48 px icon for browsers that request /favicon.ico
+serve.py              Local preview server (serves 404.html for missing paths)
 robots.txt, sitemap.xml, CNAME, .nojekyll
 ```
 
@@ -21,10 +22,11 @@ robots.txt, sitemap.xml, CNAME, .nojekyll
 Pages use root-relative paths (`/assets/...`), so serve the repo root rather than opening the files directly:
 
 ```sh
-python3 -m http.server 8000
+make serve   # background; `make stop` to shut down
+make run     # foreground; Ctrl-C to stop
 ```
 
-Then open <http://localhost:8000/>. The dev server does not serve `404.html` for missing paths, so open <http://localhost:8000/404.html> to check that page.
+Then open <http://localhost:8000/>. `serve.py` is `http.server` plus one change: missing paths get `404.html` with a 404 status, the same as on GitHub Pages.
 
 Light and dark mode follow the OS setting. In Chrome DevTools you can switch them under **Rendering → Emulate CSS media feature prefers-color-scheme**.
 
