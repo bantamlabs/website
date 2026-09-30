@@ -11,12 +11,12 @@
 :root {
   color-scheme: light dark;
 
-  --bg: #f2f2f3;
+  --bg: #f2f2f2;
   --surface: #ffffff;
-  --text: #1d1f20;
-  --muted: #4f5459;
-  --accent: #416180;
-  --border: #c9cdd1;
+  --text: #111111;
+  --muted: #555555;
+  --accent: #c8102e;
+  --border: #cccccc;
 
   --font-display: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -27,12 +27,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1d1f20;
-    --surface: #26292b;
-    --text: #f2f2f3;
-    --muted: #a9aeb3;
-    --accent: #b5d9fd;
-    --border: #3a3e41;
+    --bg: #292929;
+    --surface: #333333;
+    --text: #f2f2f2;
+    --muted: #a6a6a6;
+    --accent: #ff6f73;
+    --border: #484848;
   }
 }
 
@@ -184,6 +184,25 @@ a:hover {
 
 .card p {
   color: var(--muted);
+}
+
+/* Product links take the color of their product's logo. */
+.card-parlaycards {
+  --accent: #5980a6;
+}
+
+.card-couplr {
+  --accent: #134a2b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-parlaycards {
+    --accent: #94bce3;
+  }
+
+  .card-couplr {
+    --accent: #e883b9;
+  }
 }
 
 .card-placeholder {
@@ -358,16 +377,17 @@ a:hover {
   gap: 0.625rem;
   margin-top: 1rem;
   padding: 0.75rem 1.25rem;
-  background: var(--accent);
+  background: var(--text);
   color: var(--bg);
-  border: 1px solid var(--accent);
+  border: 1px solid var(--text);
   border-radius: 0.5rem;
   font-weight: 600;
   text-decoration: none;
 }
 
 .schedule:hover {
-  filter: brightness(1.1);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .schedule svg {
