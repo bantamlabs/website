@@ -15,7 +15,7 @@
   --surface: #ffffff;
   --text: #111111;
   --muted: #555555;
-  --accent: #c8102e;
+  --accent: #ec6664;
   --border: #cccccc;
 
   --font-display: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
@@ -31,7 +31,7 @@
     --surface: #333333;
     --text: #f2f2f2;
     --muted: #a6a6a6;
-    --accent: #ff6f73;
+    --accent: #ec6664;
     --border: #484848;
   }
 }
