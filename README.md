@@ -44,7 +44,7 @@ The images in `assets/img/` were made from `brand/` with ImageMagick and `cwebp`
 
 - **Logo:** trimmed to the artwork (836×1207 crop at +54+50), then exported as 360 px and 720 px wide WebP.
 - **Reversed (dark mode) logo:** same crop, but "LABS" (282×58 at +277+1149 in the crop) is enlarged 1.5× (Lanczos), kept centered with its top edge in place, and the canvas is extended to 836×1236. Exported at 360×532 and 720×1064.
-- **Favicons:** the hen only (crop 836×777 at +54+50), in off-white on a slate-blue (`#416180`) tile.
+- **Favicons:** the hen only (crop 836×777 at +54+50), in off-white on a red (`#EC6664`) tile with rounded corners (radius 25% of the side, anti-aliased by drawing the mask at 8× and downsampling). This applies to `favicon.ico` (16/32/48), `favicon-32.png` and `apple-touch-icon.png`.
 - **OG image:** the slate hen centered on a 1200×630 canvas filled with `#F2F2F3`.
 - **Founder headshot:** `brand/founder-headshot.jpg` exported as 360 px and 720 px WebP (`cwebp -q 82`), plus an 800 px JPEG (`founder-og.jpg`) for link previews.
 - **Founder banner:** the Memorial Union Terrace photo (iPhone HEIC, 5712×4284) cropped to 5712×1904 at +0+1536, which cuts the laptop off the bottom. Saved without metadata as the 2400×800 master `brand/founder-banner.jpg`, then exported as 672 px and 1344 px WebP (`cwebp -q 80`). On narrow screens the CSS shows it at 2:1 with `object-fit: cover`.
